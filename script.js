@@ -1,12 +1,26 @@
+/**
+ * Gets the element by id from history_value
+ */
 function getHistory(){
 	return document.getElementById("history-value").innerText;
 }
+/**
+ * print the numbers and keys that were pressed
+ * @param {*} num 
+ */
 function printHistory(num){
 	document.getElementById("history-value").innerText=num;
 }
+/**
+ * Gets the output element 
+ */
 function getOutput(){
 	return document.getElementById("output-value").innerText;
 }
+/**
+ * Print output value if is not empty
+ * @param {*} num 
+ */
 function printOutput(num){
 	if(num==""){
 		document.getElementById("output-value").innerText=num;
@@ -15,6 +29,10 @@ function printOutput(num){
 		document.getElementById("output-value").innerText=getFormattedNumber(num);
 	}	
 }
+/**
+ * change str format  to numbre format 
+ * @param {*} num numbre to format
+ */
 function getFormattedNumber(num){
 	if(num=="-"){
 		return "";
@@ -23,9 +41,16 @@ function getFormattedNumber(num){
 	var value = n.toLocaleString("en");
 	return value;
 }
+/**
+ * change the char / and /g to ''
+ * @param {*} num 
+ */
 function reverseNumberFormat(num){
 	return Number(num.replace(/,/g,''));
 }
+/**
+ * Find an action event about operators
+ */
 var operator = document.getElementsByClassName("operator");
 for(var i =0;i<operator.length;i++){
 	operator[i].addEventListener('click',function(){
@@ -66,6 +91,9 @@ for(var i =0;i<operator.length;i++){
 		
 	});
 }
+/**
+ * Find an action event about numbers
+ */
 var number = document.getElementsByClassName("number");
 for(var i =0;i<number.length;i++){
 	number[i].addEventListener('click',function(){

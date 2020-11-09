@@ -1,3 +1,6 @@
+/*-------------------------------------------*\
+   Window style
+\*-------------------------------------------*/
 body{
 
 	font-family: 'Open Sans',sans-serif;
@@ -12,6 +15,9 @@ body{
     margin: 20px auto;
     	
 }
+/*-------------------------------------------*\
+    calculator interface style 
+\*-------------------------------------------*/
 #calculator{
 
 	width: 320px;
@@ -48,6 +54,10 @@ body{
 #keyboard{
 	height: 400px;
 }
+
+/*-------------------------------------------*\
+   KEyboard buttons styles
+\*-------------------------------------------*/
 .operator, .number, .empty{
 
 	width: 50px;
